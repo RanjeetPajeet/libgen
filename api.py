@@ -49,7 +49,7 @@ class Search:
     for result in results:
       if author.lower() in result["Author"]:
         filtered.append(result)
-    return filtered
+    return filtered, results
   
   
 #   @staticmethod
