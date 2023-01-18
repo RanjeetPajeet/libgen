@@ -43,3 +43,8 @@ submit_button2 = st.button("Submit2")
 if submit_button2:
     st.write(search.by_title_and_author(title,author))
     
+
+submit_button3 = st.button("Submit3")
+if submit_button3:
+    st.write(search.by_title_and_author2(title,author))
+    
