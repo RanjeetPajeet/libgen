@@ -44,9 +44,8 @@ if submit_button2:
     st.write(search.by_title_and_author(title,author))
     
 
-submit_button3 = st.button("Submit3")
+submit_button3 = st.button("Get Downloads")
 if submit_button3:
-    a,b = search.by_title2(title,author)
-    st.write(a)
-    st.write(b)
+    downloads = search.get_downloads(search.by_title_and_author(title,author))
+    st.write(downloads)
     
