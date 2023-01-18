@@ -5,7 +5,7 @@ app.py
 Main file.
 """
 
-from api import *
+from api import search
 import streamlit as st
 
 
@@ -20,6 +20,7 @@ st.markdown("---")
 
 
 
+
 with st.container():
     st.markdown("## Search")
     st.markdown("###")
@@ -31,5 +32,8 @@ with st.container():
         author = st.text_input("Author Name", "")
         
 
+
         
 submit_button = st.button("Submit")
+if submit_button:
+    st.write(search.by_title(title))
