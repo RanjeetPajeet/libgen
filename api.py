@@ -44,8 +44,12 @@ class Search:
   
   def by_title_and_author2(self, title: str, author: str):
     s = libgen_api.LibgenSearch()
-    results = s.search_title_filtered( title, {"Extension":"pdf", "Author":author}, exact_match=False )
-    return results
+    results = s.search_title_filtered( title, {"Extension":"pdf"} )
+    filtered = []
+    for result in results:
+      if author.lower() in result["Author"]:
+        filtered.append(result)
+    return filtered
   
   
 #   @staticmethod
