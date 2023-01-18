@@ -30,3 +30,6 @@ with st.container():
     with author_col:
         author = st.text_input("Author Name", "")
         
+
+        
+submit_button = st.button("Submit")
