@@ -8,8 +8,8 @@ Summary of `libgen-api` methods.
 import libgen_api
 
 
+__all__ = ["search"]
 
-search = Search()
 
 
 
@@ -45,3 +45,10 @@ class Search:
 #   @staticmethod
   def get_downloads(self, search_results: dict):
     pass
+
+  
+  
+  
+  
+  
+search = Search()
