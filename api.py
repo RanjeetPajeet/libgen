@@ -54,7 +54,7 @@ class Search:
   
 #   @staticmethod
   def get_downloads(self, search_results: list):
-    s = LibgenSearch()
+    s = libgen_api.LibgenSearch()
     downloads = s.resolve_download_links(search_results[0])
     return downloads
 
