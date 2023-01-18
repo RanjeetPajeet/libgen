@@ -42,19 +42,21 @@ class Search:
     return results
   
   
-  def by_title2(self, title: str, author: str):
-    s = libgen_api.LibgenSearch()
-    results = s.search_title_filtered( title, {"Extension":"pdf"} )
-    filtered = []
-    for result in results:
-      if author.lower() in result["Author"]:
-        filtered.append(result)
-    return filtered, results
+#   def by_title2(self, title: str, author: str):
+#     s = libgen_api.LibgenSearch()
+#     results = s.search_title_filtered( title, {"Extension":"pdf"} )
+#     filtered = []
+#     for result in results:
+#       if author.lower() in result["Author"]:
+#         filtered.append(result)
+#     return filtered, results
   
   
 #   @staticmethod
-  def get_downloads(self, search_results: dict):
-    pass
+  def get_downloads(self, search_results: list):
+    s = LibgenSearch()
+    downloads = s.resolve_download_links(search_results[0])
+    return downloads
 
   
   
