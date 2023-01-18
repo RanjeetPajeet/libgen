@@ -42,7 +42,7 @@ class Search:
     return results
   
   
-  def by_title_and_author2(self, title: str, author: str):
+  def by_title2(self, title: str, author: str):
     s = libgen_api.LibgenSearch()
     results = s.search_title_filtered( title, {"Extension":"pdf"} )
     filtered = []
