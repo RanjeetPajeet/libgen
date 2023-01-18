@@ -53,9 +53,11 @@ class Search:
   
   
 #   @staticmethod
-  def get_downloads(self, search_results: list):
+  def get_downloads(self, search_results: list, just_one: bool = False):
     s = libgen_api.LibgenSearch()
     downloads = s.resolve_download_links(search_results[0])
+    if just_one:
+      return downloads["GET"]
     return downloads
 
   
